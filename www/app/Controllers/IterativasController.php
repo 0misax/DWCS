@@ -165,9 +165,6 @@ class IterativasController extends BaseController
     }
 
 
-
-
-
     /*Crea un script que reciba una cadena de texto y muestre por pantalla una lista de las palabras existentes en ella
      ordenadas por número de apariciones.*/
 
@@ -206,6 +203,32 @@ class IterativasController extends BaseController
             arsort($resultado);
             $this->iterativas5(input: $input, resultado: $resultado);
         }
+    }
+
+    /*Script que implemente la criba de erastótenes. Recibe un número e imprime los números primos existentes dende 2..n.
+     El algoritmo es el seguinte: llenamos un array cos valores de 1..n.
+     Comenzamos por 2 y vamos eliminando las posiciones que son múltiplos de 2.
+     Avanzamos al siguiente primo y borramos los múltiplos de este. Hacer hasta llegar a la última iteración.*/
+
+
+    public function iterativas6(array $input = [], array $errors = [], array $resultado = []): void
+    {
+        $data = array(
+            'titulo' => 'Iterativas 6',
+            'breadcrumb' => ['Inicio', 'Iterativas', 'Iterativas 6'],
+            'errors' => $errors,
+            'input' => $input,
+            'resultado' => $resultado
+        );
+        $this->view->showViews(
+            array('templates/header.view.php', 'iterativas6.view.php', 'templates/footer.view.php'),
+            $data
+        );
+    }
+
+
+    public function doIterativas6(): void{
+
     }
 
 }

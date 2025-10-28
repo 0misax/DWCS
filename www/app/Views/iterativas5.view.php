@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 
 <?php
-if (isset($resultado)) {
+if (!empty($resultado)) {
     ?>
     <div class="alert alert-success" role="alert">
         <?php
