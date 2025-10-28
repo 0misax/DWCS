@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 
 <?php
-if (!empty($resultado)) {
+if (isset($resultado)) {
     ?>
     <div class="alert alert-success" role="alert">
         <?php
@@ -20,7 +20,7 @@ if (!empty($resultado)) {
 <div class="card shadow mb-4">
     <form method="post" action="">
         <div
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary"><?php echo $titulo; ?> </h6>
         </div>
         <!-- Card Body -->
